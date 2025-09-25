@@ -19,7 +19,7 @@ public class FacteursPremiersTest {
     }
 
     @Test
-    public void generate2_doitRetournerListeVide() {
+    public void generate2_doitRetourner2() {
         //given
         int nombre = 2;
 
@@ -28,5 +28,15 @@ public class FacteursPremiersTest {
 
         //Then
         assertThat(resultat).containsExactly(2);
+    }
+
+    @Test
+    public void generate6_doitRetourner2et3() {
+
+        int nombre = 6;
+
+        List<Integer> resultat = FacteursPremiers.generate(nombre);
+
+        assertThat(resultat).containsExactly(2,3);
     }
 }

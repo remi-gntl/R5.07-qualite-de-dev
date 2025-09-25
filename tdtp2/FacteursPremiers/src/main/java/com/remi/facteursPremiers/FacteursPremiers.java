@@ -8,8 +8,11 @@ public class FacteursPremiers {
     public static List<Integer> generate (int nombre) {
         List<Integer> resultat = new ArrayList<>();
 
-        if (nombre == 2) {
-            resultat.add(2);
+        for(int diviseur = 2; diviseur <= nombre; diviseur++) {
+            while (nombre % diviseur == 0) {
+                resultat.add(diviseur);
+                nombre = nombre / diviseur;
+            }
         }
 
         return resultat;
