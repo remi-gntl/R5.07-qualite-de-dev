@@ -1,7 +1,20 @@
 package com.remi.facteursPremiers;
 
 import org.junit.jupiter.api.Test;
+import java.util.List;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FacteursPremiersTest {
 
+    @Test
+    public void generate1_doitRetournerListeVide() {
+        // Given
+        int nombre = 1;
+
+        // When
+        List<Integer> result = FacteursPremiers.generate(nombre);
+
+        // Then
+        assertThat(result).isEmpty();
+    }
 }
