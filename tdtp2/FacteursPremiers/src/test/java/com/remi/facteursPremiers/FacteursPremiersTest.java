@@ -12,9 +12,21 @@ public class FacteursPremiersTest {
         int nombre = 1;
 
         // When
-        List<Integer> result = FacteursPremiers.generate(nombre);
+        List<Integer> resultat = FacteursPremiers.generate(nombre);
 
         // Then
-        assertThat(result).isEmpty();
+        assertThat(resultat).isEmpty();
+    }
+
+    @Test
+    public void generate2_doitRetournerListeVide() {
+        //given
+        int nombre = 2;
+
+        //when
+        List<Integer> resultat = FacteursPremiers.generate(nombre);
+
+        //Then
+        assertThat(resultat).containsExactly(2);
     }
 }
