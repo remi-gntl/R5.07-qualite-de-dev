@@ -34,4 +34,14 @@ public class PersonnageTest {
 
         assertThat(orientation).isEqualTo(Orientation.EST);
     }
+
+    @Test
+    public void tournerDunDemiTourDeNordDonneSud() {
+        Personnage p = new Personnage();
+
+        Orientation orientation = p.tourner(2);
+
+        assertThat(orientation).isEqualTo(Orientation.SUD);
+
+    }
 }
