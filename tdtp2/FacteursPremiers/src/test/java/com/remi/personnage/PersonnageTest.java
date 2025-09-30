@@ -23,6 +23,15 @@ public class PersonnageTest {
 
         Orientation orientation = p.tourner(0);
 
-        assertThat(orientation).isEqualTo(orientation.NORD);
+        assertThat(orientation).isEqualTo(Orientation.NORD);
+    }
+
+    @Test
+    public void tournerDUnQuartDeTourDeNordDonneEst() {
+        Personnage p = new Personnage();
+
+        Orientation orientation = p.tourner(1);
+
+        assertThat(orientation).isEqualTo(Orientation.EST);
     }
 }
