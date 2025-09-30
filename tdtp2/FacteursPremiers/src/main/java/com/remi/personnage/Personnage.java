@@ -10,4 +10,8 @@ public class Personnage {
     public Orientation getOrientation() {
         return orientation;
     }
+
+    public Orientation tourner(int fois) {
+        return orientation;
+    }
 }

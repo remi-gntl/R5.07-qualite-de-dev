@@ -16,4 +16,13 @@ public class PersonnageTest {
         //then
         assertThat(orientation).isEqualTo(Orientation.NORD);
     }
+
+    @Test
+    public void tournerDeZeroQuartDeTourNeChangePasOrientation() {
+        Personnage p = new Personnage();
+
+        Orientation orientation = p.tourner(0);
+
+        assertThat(orientation).isEqualTo(orientation.NORD);
+    }
 }
