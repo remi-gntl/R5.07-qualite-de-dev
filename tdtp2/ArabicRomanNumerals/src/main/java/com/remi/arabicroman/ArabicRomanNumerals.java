@@ -4,6 +4,18 @@ public class ArabicRomanNumerals {
     public static String convert(int nbr) {
         String resultat = "";
 
+        // Traiter les 50
+        while (nbr >= 50) {
+            resultat += "L";
+            nbr -= 50;
+        }
+
+        // Traiter le 40
+        if (nbr >= 40) {
+            resultat += "XL";
+            nbr -= 40;
+        }
+
         // Traiter les 10
         while (nbr >= 10) {
             resultat += "X";

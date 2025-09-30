@@ -99,5 +99,59 @@ public class ArabicRomanNumeralsTest {
         // then
         assertThat(resultat).isEqualTo("IX");
     }
+
+    @Test
+    public void convertQuatorzeDonneXIV() {
+        // given
+        int nombre = 14;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("XIV");
+    }
+
+    @Test
+    public void convertDixNeufDonneXIX() {
+        // given
+        int nombre = 19;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("XIX");
+    }
+
+    @Test
+    public void convertTrenteNeufDonneXXXIX() {
+        // given
+        int nombre = 39;
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+        // then
+        assertThat(resultat).isEqualTo("XXXIX");
+    }
+
+    @Test
+    public void convertQuaranteDonneXL() {
+        // given
+        int nombre = 40;
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+        // then
+        assertThat(resultat).isEqualTo("XL");
+    }
+
+    @Test
+    public void convertCinquanteDonneL() {
+        // given
+        int nombre = 50;
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+        // then
+        assertThat(resultat).isEqualTo("L");
+    }
 }
 
