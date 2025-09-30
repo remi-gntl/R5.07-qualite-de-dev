@@ -48,4 +48,13 @@ public class FacteursPremiersTest {
 
         assertThat(resultat).containsExactly(2, 2, 2);
     }
+
+    @Test
+    public void generate12_doitRetourner2_2_3() {
+        int nombre = 12;
+
+        List<Integer> resultat = FacteursPremiers.generate(nombre);
+
+        assertThat(resultat).containsExactly(2, 2, 3);
+    }
 }

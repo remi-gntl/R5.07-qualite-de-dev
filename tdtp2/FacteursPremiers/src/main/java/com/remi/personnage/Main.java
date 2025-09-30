@@ -1,4 +1,4 @@
-package com.remi.facteursPremiers;
+package com.remi.personnage;
 
 public class Main {
 
