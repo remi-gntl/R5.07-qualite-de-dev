@@ -51,5 +51,17 @@ public class ArabicRomanNumeralsTest {
         // then
         assertThat(resultat).isEqualTo("II");
     }
+
+    @Test
+    public void convertTroisDonneIII() {
+        // given
+        int nombre = 3;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("III");
+    }
 }
 

@@ -9,6 +9,9 @@ public class ArabicRomanNumerals {
         if (nbr == 10) {
             return "X";
         }
+        if (nbr == 3) {
+            return "III";
+        }
         if (nbr == 2) {
             return "II";
         }
