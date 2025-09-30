@@ -65,5 +65,12 @@ public class PersonnageTest {
         Orientation orientation = p.tourner(5);
         assertThat(orientation).isEqualTo(Orientation.EST);
     }
-    
+
+    @Test
+    public void tournerDepuisUneOrientationDifferenteDeNord() {
+        Personnage p = new Personnage();
+        p.tourner(1); // maintenant à l'EST
+        Orientation orientation = p.tourner(1); // encore un quart de tour
+        assertThat(orientation).isEqualTo(Orientation.SUD);
+    }
 }
