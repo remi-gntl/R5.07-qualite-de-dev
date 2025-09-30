@@ -63,5 +63,17 @@ public class ArabicRomanNumeralsTest {
         // then
         assertThat(resultat).isEqualTo("III");
     }
+
+    @Test
+    public void convertSixDonneVI() {
+        // given
+        int nombre = 6;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("VI");
+    }
 }
 
