@@ -2,19 +2,26 @@ package com.remi.arabicroman;
 
 public class ArabicRomanNumerals {
     public static String convert(int nbr) {
-        if(nbr == 5)
-        {
-            return "V";
+        String resultat = "";
+
+        // Traiter les 10
+        while (nbr >= 10) {
+            resultat += "X";
+            nbr -= 10;
         }
-        if (nbr == 10) {
-            return "X";
+
+        // Traiter les 5
+        if (nbr >= 5) {
+            resultat += "V";
+            nbr -= 5;
         }
-        if (nbr == 3) {
-            return "III";
+
+        // Traiter les 1
+        while (nbr >= 1) {
+            resultat += "I";
+            nbr -= 1;
         }
-        if (nbr == 2) {
-            return "II";
-        }
-        return "I";
+
+        return resultat;
     }
 }
