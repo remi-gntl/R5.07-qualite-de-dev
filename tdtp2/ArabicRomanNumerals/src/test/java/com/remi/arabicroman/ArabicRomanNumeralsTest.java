@@ -75,5 +75,29 @@ public class ArabicRomanNumeralsTest {
         // then
         assertThat(resultat).isEqualTo("VI");
     }
+
+    @Test
+    public void convertQuatreDonneIV() {
+        // given
+        int nombre = 4;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("IV");
+    }
+
+    @Test
+    public void convertNeufDonneIX() {
+        // given
+        int nombre = 9;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("IX");
+    }
 }
 

@@ -10,10 +10,22 @@ public class ArabicRomanNumerals {
             nbr -= 10;
         }
 
+        // Traiter le 9
+        if (nbr == 9) {
+            resultat += "IX";
+            nbr -= 9;
+        }
+
         // Traiter les 5
         if (nbr >= 5) {
             resultat += "V";
             nbr -= 5;
+        }
+
+        // Traiter le 4
+        if (nbr == 4) {
+            resultat += "IV";
+            nbr -= 4;
         }
 
         // Traiter les 1
