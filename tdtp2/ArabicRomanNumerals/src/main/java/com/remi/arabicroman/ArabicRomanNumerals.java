@@ -6,8 +6,11 @@ public class ArabicRomanNumerals {
         {
             return "V";
         }
-        else if (nbr == 10) {
+        if (nbr == 10) {
             return "X";
+        }
+        if (nbr == 2) {
+            return "II";
         }
         return "I";
     }

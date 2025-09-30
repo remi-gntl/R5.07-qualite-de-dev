@@ -39,5 +39,17 @@ public class ArabicRomanNumeralsTest {
         // then
         assertThat(resultat).isEqualTo("X");
     }
+
+    @Test
+    public void convertDeuxDonneII() {
+        // given
+        int nombre = 2;
+
+        // when
+        String resultat = ArabicRomanNumerals.convert(nombre);
+
+        // then
+        assertThat(resultat).isEqualTo("II");
+    }
 }
 
