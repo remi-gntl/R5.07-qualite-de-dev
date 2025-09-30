@@ -1,51 +1,23 @@
 package com.remi.arabicroman;
 
 public class ArabicRomanNumerals {
+
+    // Table de correspondance : valeurs décroissantes
+    private static final int[] VALEURS = {50, 40, 10, 9, 5, 4, 1};
+    private static final String[] SYMBOLES = {"L", "XL", "X", "IX", "V", "IV", "I"};
+
     public static String convert(int nbr) {
-        String resultat = "";
+        StringBuilder resultat = new StringBuilder();
 
-        // Traiter les 50
-        while (nbr >= 50) {
-            resultat += "L";
-            nbr -= 50;
+        // Parcourir les valeurs de la plus grande à la plus petite
+        for (int i = 0; i < VALEURS.length; i++) {
+            // Tant qu'on peut soustraire cette valeur
+            while (nbr >= VALEURS[i]) {
+                resultat.append(SYMBOLES[i]);
+                nbr -= VALEURS[i];
+            }
         }
 
-        // Traiter le 40
-        if (nbr >= 40) {
-            resultat += "XL";
-            nbr -= 40;
-        }
-
-        // Traiter les 10
-        while (nbr >= 10) {
-            resultat += "X";
-            nbr -= 10;
-        }
-
-        // Traiter le 9
-        if (nbr == 9) {
-            resultat += "IX";
-            nbr -= 9;
-        }
-
-        // Traiter les 5
-        if (nbr >= 5) {
-            resultat += "V";
-            nbr -= 5;
-        }
-
-        // Traiter le 4
-        if (nbr == 4) {
-            resultat += "IV";
-            nbr -= 4;
-        }
-
-        // Traiter les 1
-        while (nbr >= 1) {
-            resultat += "I";
-            nbr -= 1;
-        }
-
-        return resultat;
+        return resultat.toString();
     }
 }
